@@ -1,4 +1,4 @@
-#include "inc/apelib.h"
+#include "../inc/apelib.h"
 
 int main(int argc, char *argv[])
 {
@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 	for(k = 0; k < out.bas; k++){
 		for(i = 0; i < out.row; i++){
 			for(j = 0; j < out.col; j++){
-				out.data[k][i][j] = in.data[k][i][255-j];
+				out.data[k][i][j] = in.data[k][j][255-i];
 			}
 		}
 	}

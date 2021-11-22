@@ -1,5 +1,6 @@
 ```
-./bin/gccd kadai.c
+cd kadai3/
+../bin/gccd kadai.c
 ```
 
 ```
