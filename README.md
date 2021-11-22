@@ -1,3 +1,11 @@
+```
+./bin/gccd kadai.c
+```
+
+```
+./kadai img01 out_img
+```
+
 パスの追加
 
 ```

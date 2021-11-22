@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 	for(k = 0; k < out.bas; k++){
 		for(i = 0; i < out.row; i++){
 			for(j = 0; j < out.col; j++){
-				out.data[k][i][j] = in.data[k][i][j];
+				out.data[k][i][j] = in.data[k][i][255-j];
 			}
 		}
 	}
