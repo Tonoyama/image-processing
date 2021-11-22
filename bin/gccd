@@ -20,10 +20,9 @@ filename_without_ext=${1%.*}
 obj_filename="${filename_without_ext}.o"
 
 #コンパイル実行
-arm-linux-gnueabihf-gcc -I/home/p-user/work/inc -c $1
+gcc -I/home/runner/MotionlessSneakyBrackets/inc -c $1
 
 #リンク実行
-#gcc -o $filename_without_ext $obj_filename
-arm-linux-gnueabihf-gcc -o $filename_without_ext $obj_filename -L/home/p-user/work/lib -lm -lapelib
+gcc -o $filename_without_ext $obj_filename -L/home/runner/MotionlessSneakyBrackets/lib -lm -lapelib
 
 echo "メイク完了"
