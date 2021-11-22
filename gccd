@@ -1,0 +1,29 @@
+#!/bin/sh
+
+#引数の数の存在確認
+if [ $# -ne 1 ]; then
+	echo "引数が異常です！！"
+	exit 1
+fi
+
+#ファイルの存在確認
+if [ ! -e $1 ]; then
+
+	echo "引数で指定したファイル(${1})は存在しません！！"
+	exit 1
+fi
+
+#拡張子なしのファイル名を取り出す	
+filename_without_ext=${1%.*}
+
+#オブジェクト形式のファイル名を作成	
+obj_filename="${filename_without_ext}.o"
+
+#コンパイル実行
+arm-linux-gnueabihf-gcc -I/home/p-user/work/inc -c $1
+
+#リンク実行
+#gcc -o $filename_without_ext $obj_filename
+arm-linux-gnueabihf-gcc -o $filename_without_ext $obj_filename -L/home/p-user/work/lib -lm -lapelib
+
+echo "メイク完了"
