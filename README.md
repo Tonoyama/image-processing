@@ -1,10 +1,13 @@
 ```
-cd kadai3/
-../bin/gccd kadai.c
+cd kadai/
 ```
 
 ```
-./kadai img01 out_img
+../bin/gccd 1.c
+```
+
+```
+./1 img01 out_img
 ```
 
 パスの追加
